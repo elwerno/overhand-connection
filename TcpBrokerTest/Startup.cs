@@ -22,10 +22,10 @@ namespace TcpBrokerTest
         // In class _Startup_ of the ASP.NET Core 2.0 project.
         public void ConfigureServices(IServiceCollection services)
         {
-            // TODO: add default options for windows
-
             //this adds a hosted mqtt server to the services
-            services.AddHostedMqttServer(builder => builder.WithDefaultEndpointPort(1883));
+            var ipAddress = new byte[] {0, 0, 0, 0};
+            var ipObject = new System.Net.IPAddress(ipAddress);
+            services.AddHostedMqttServer(builder => builder.WithDefaultEndpointBoundIPAddress(ipObject).WithDefaultEndpointPort(1883));
 
             //this adds tcp server support based on System.Net.Socket
             services.AddMqttTcpServerAdapter();
