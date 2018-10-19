@@ -18,11 +18,11 @@ This makes it a lot easier to gather new data for the machine learning algorithm
 
 ## Instructions
 
-1 Connect your computer to the Overhand Network (via WiFi or Ethernet Cable)
-2 Set your IP Address to `11.0.0.2`
-3 Start the server (`dotnet run --project TcpBrokerTest.csproj`)
-4 Go to `http://localhost:yourPortNumber/index.html`
-5 Enjoy!
+1. Connect your computer to the Overhand Network (via WiFi or Ethernet Cable)
+2. Set your IP Address to `11.0.0.2`
+3. Start the server (`dotnet run --project TcpBrokerTest.csproj`)
+4. Go to `http://localhost:yourPortNumber/index.html`
+5. Enjoy!
 
 # Possible Improvements 
 
