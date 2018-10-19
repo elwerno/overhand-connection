@@ -32,6 +32,7 @@ connection.on("NewData", function (trackerId, data) {
     });
 
     // TODO: create a function for this
+    // TODO: add more datasets to the chart
     lowAccX.forEach((value) => {
         chart.data.datasets[3].data.push(value);
     });
@@ -56,7 +57,6 @@ connection.start().catch(function (err) {
     return console.error(err.toString());
 });
 
-// todo: auslagern
 let isRecording = false;
 document.getElementById("recordingState").addEventListener('click', (e) => {
 
@@ -76,8 +76,6 @@ document.getElementById("recordingState").addEventListener('click', (e) => {
     
     e.preventDefault();
 });
-
-connection.invoke('')
 
 Chart.defaults.showLines = true;
 
